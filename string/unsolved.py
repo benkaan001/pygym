@@ -60,3 +60,14 @@ str1 = "Welcome to USA. usa awesome, isn't it?" # count = 2
 # (10) Given a string s1, write a program to return the sum and average of the digits
 # that appear in the string, ignoring all other characters.
 str1 = "PYnative29@#8496"  # Sum is: 38 Average is  6.333333333333333
+
+
+
+# (11) Write a program to count occurrences of all characters within a string
+str1 = "Apple"  # {'A': 1, 'p': 2, 'l': 1, 'e': 1}
+
+
+
+# (12)  Reverse a given string
+str1 = "PYnative"   # evitanYP
+

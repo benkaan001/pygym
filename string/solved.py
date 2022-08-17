@@ -118,3 +118,26 @@ digits_sum = sum(digits)
 digits_avg = digits_sum / len(digits)
 
 print(f"Sum is: {digits_sum}\nAverage is: {digits_avg}")
+
+
+# (11) Write a program to count occurrences of all characters within a string
+
+str1 = "Apple"  # {'A': 1, 'p': 2, 'l': 1, 'e': 1}
+
+str_dic = { letter: str1.count(letter) for letter in str1 }
+
+print(str_dic)
+
+
+# (12)  Reverse a given string
+
+str1 = "PYnative"   # evitanYP
+
+str1_reversed = "".join(sorted(str1, reverse = True))
+str1_reversed = str1[::-1]
+
+print(str1_reversed)
+
+# most cost effective
+str1 = "".join(reversed(str1))
+print(str1)
