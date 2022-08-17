@@ -82,3 +82,30 @@ s2 = "Xyz"  # AzbycX
 joined = "".join( (s1[i] + s2[len(s2)-1-i]) for i in range(len(s1)))
 print(joined)
 
+# (8) Write a program to check if two strings are balanced.
+# For example, strings s1 and s2 are balanced if all the characters in the s1 are present in s2.
+# The character’s position doesn’t matter.
+
+s1 = "Yn"
+s2 = "PYnative"  # True
+
+s1 = "Ynf"
+s2 = "PYnative" # False
+
+if s1 in s2: print(True)
+else: print(False)
+
+
+
+# (9) Write a program to find all occurrences of “USA” in a given string ignoring the case.
+
+str1 = "Welcome to USA. usa awesome, isn't it?" # count = 2
+
+count = str1.upper().count("USA")
+
+print(count)
+
+
+#
+
+

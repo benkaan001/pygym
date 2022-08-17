@@ -41,3 +41,16 @@ s2 = "Xyz"  # AzbycX
 
 
 
+# (8) Write a program to check if two strings are balanced.
+# For example, strings s1 and s2 are balanced if all the characters in the s1 are present in s2.
+# The character’s position doesn’t matter.
+s1 = "Yn"
+s2 = "PYnative"  # True
+
+s1 = "Ynf"
+s2 = "PYnative" # False
+
+
+
+# (9) Write a program to find all occurrences of “USA” in a given string ignoring the case.
+str1 = "Welcome to USA. usa awesome, isn't it?" # count = 2
