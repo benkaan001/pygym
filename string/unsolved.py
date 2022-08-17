@@ -54,3 +54,9 @@ s2 = "PYnative" # False
 
 # (9) Write a program to find all occurrences of “USA” in a given string ignoring the case.
 str1 = "Welcome to USA. usa awesome, isn't it?" # count = 2
+
+
+
+# (10) Given a string s1, write a program to return the sum and average of the digits
+# that appear in the string, ignoring all other characters.
+str1 = "PYnative29@#8496"  # Sum is: 38 Average is  6.333333333333333

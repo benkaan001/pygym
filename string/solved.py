@@ -1,4 +1,5 @@
 # (1) Write a program to create a new string made of an input string’s first, middle, and last character.
+from audioop import avg
 from curses.ascii import isalpha, isdigit
 
 
@@ -106,6 +107,14 @@ count = str1.upper().count("USA")
 print(count)
 
 
-#
+# (10) Given a string s1, write a program to return the sum and average of the digits
+# that appear in the string, ignoring all other characters.
 
+str1 = "PYnative29@#8496"  # Sum is: 38 Average is  6.333333333333333
 
+digits = [ int(i) for i in str1 if i.isdigit() ] # [2, 9, 8, 4, 9, 6]
+
+digits_sum = sum(digits)
+digits_avg = digits_sum / len(digits)
+
+print(f"Sum is: {digits_sum}\nAverage is: {digits_avg}")
