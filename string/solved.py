@@ -1,5 +1,8 @@
-# (1) Write a program to create a new string made of an input string’s first, middle, and last character.
+import string
 import re
+
+
+# (1) Write a program to create a new string made of an input string’s first, middle, and last character.
 str1 = "festive"  # fte
 
 new_str = str1[0] + str1[len(str1) // 2] + str1[len(str1)-1]
@@ -165,3 +168,18 @@ str1 = "She is 25 years and 10 months old"  # 2510
 
 filtered = "".join(list(filter(lambda x: x.isdigit(), str1)))
 print(filtered)
+str1_comp = "".join([i for i in str1 if i.isdigit()])
+print(str1_comp)
+
+
+# (18) Write a program to find words with both alphabets and numbers from an input string.
+str1 = "Emma25 is Data scientist50 and AI Expert"  # Emma25 , scientist50
+
+
+# (19) Replace each special symbol with # in the following string
+str1 = "/*Jon is @developer & musician!!"
+# ##Jon is #developer # musician##
+
+for char in string.punctuation:
+    str1 = str1.replace(char, "#")
+print(str1)

@@ -81,3 +81,14 @@ str1 = "/*Jon is @develo^^^per & musician&&"     # "Jon is developer musician"
 
 # (17) Removal all characters from a string except integers
 str1 = "She is 25 years and 10 months old"  # 2510
+
+
+# (18) Write a program to find words with both alphabets and numbers from an input string.
+str1 = "Emma25 is Data scientist50 and AI Expert"  # Emma25 , scientist50
+
+
+# (19) Replace each special symbol with # in the following string
+str1 = "/*Jon is @developer & musician!!"
+# ##Jon is #developer # musician##
+
+# HINT -> IMPORT string --> string.punctuations
