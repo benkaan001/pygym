@@ -68,6 +68,24 @@ str1 = "Apple"  # {'A': 1, 'p': 2, 'l': 1, 'e': 1}
 
 
 
-# (12)  Reverse a given string
+# (12) Reverse a given string
 str1 = "PYnative"   # evitanYP
+
+
+
+
+# (13) Write a program to find the last position of a substring “Emma” in a given string.
+str1 = "Emma is a data scientist who knows Python. Emma works at google."
+# Last occurrence of Emma starts at index 43
+
+
+
+# (14) Split a string on hyphens
+str1 = "Emma-is-a-data-scientist" # Emmaisadatascientist
+
+
+
+# (15) Remove empty strings from a list of strings
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+# ['Emma', 'Jon', 'Kelly', 'Eric']
 
