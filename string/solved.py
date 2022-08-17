@@ -1,4 +1,7 @@
 # (1) Write a program to create a new string made of an input string’s first, middle, and last character.
+from curses.ascii import isalpha, isdigit
+
+
 str1 = "festive" # fte
 
 new_str = str1[0] + str1[len(str1) // 2] + str1[len(str1)-1]
@@ -33,8 +36,8 @@ print(transformed)
 
 str1 = "PyNaTive" # yaivePNT
 
-lower=[]
-upper=[]
+lower = []
+upper = []
 
 for i in str1:
    if i.islower():
@@ -44,3 +47,38 @@ for i in str1:
 
 joined = "".join(lower+upper)
 print(joined)
+
+
+# (6) Count all letters, digits, and special symbols from a given string
+# Characters=8  Digits=3    Symbols=4
+
+str1 = "P@#yn26at^&i5ve"
+
+# can simply initalize count instead
+char = []
+digit = []
+symbol = []
+
+for i in str1:
+    if i.isalpha():
+        char.append(i)
+    elif i.isdigit():
+        digit.append(i)
+    else:
+        symbol.append(i)
+
+print(f"Characters={len(char)}\nDigits={len(digit)}\nSymbols={len(symbol)}")
+
+
+# (7) Given two strings, s1 and s2. Write a program to create a new string s3
+# made of the first char of s1, then the last char of s2,
+# Next, the second char of s1 and second last char of s2, and so on.
+# Any leftover chars go at the end of the result.
+
+s1 = "Abc"
+s2 = "Xyz"  # AzbycX
+
+
+joined = "".join( (s1[i] + s2[len(s2)-1-i]) for i in range(len(s1)))
+print(joined)
+
