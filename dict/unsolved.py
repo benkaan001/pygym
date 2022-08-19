@@ -60,3 +60,31 @@ keys = ["name", "salary"]
 # (7) Write a Python program to check if value 200 exists in the following dictionary.
 sample_dict = {'a': 100, 'b': 200, 'c': 300}
 # 200 present in a dict
+
+
+# (8) Write a program to rename a key city to a location in the following dictionary.
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+# {'name': 'Kelly', 'age': 25, 'salary': 8000, 'location': 'New york'}
+
+
+# (9) Get the key of a minimum value from the following dictionary
+sample_dict = {
+    'Physics': 82,
+    'Math': 65,
+    'history': 75
+}
+# Math
+
+
+# (10) Change value of a key in a nested dictionary
+sample_dict = {
+    'emp1': {'name': 'Jhon', 'salary': 7500},
+    'emp2': {'name': 'Emma', 'salary': 8000},
+    'emp3': {'name': 'Brad', 'salary': 500}
+}
+# 'emp3': {'name': 'Brad', 'salary': 8500}
