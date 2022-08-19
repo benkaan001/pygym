@@ -33,3 +33,20 @@ list1 = ["Mike", "", "Emma", "Kelly", "", "Brad"]
 # (7) Write a program to add item 7000 after 6000 in the following Python List
 list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
 # [10, 20, [300, 400, [5000, 6000, 7000], 500], 30, 40]
+
+
+# (8) You have given a nested list. Write a program to extend it by adding the sublist
+# ["h", "i", "j"] in such a way that it will look like the following list.
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+sub_list = ["h", "i", "j"]
+# ['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+
+
+# (9) Write a program to find value 20 in the list, and if it is present,
+# replace it with 200. Only update the first occurrence of an item.
+list1 = [5, 10, 15, 20, 25, 50, 20]
+# [5, 10, 15, 200, 25, 50, 20]
+
+
+# (10) Given a Python list, write a program to remove all occurrences of item 20.
+list1 = [5, 20, 15, 20, 25, 50, 20]

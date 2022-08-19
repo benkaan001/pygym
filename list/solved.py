@@ -74,3 +74,39 @@ print(list1)
 list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
 list1[2][2].insert(2, 7000)
 print(list1)
+
+
+# (8) You have given a nested list. Write a program to extend it by adding the sublist
+# ["h", "i", "j"] in such a way that it will look like the following list.
+list1 = ["a", "b", ["c", ["d", "e", ["f", "g"], "k"], "l"], "m", "n"]
+sub_list = ["h", "i", "j"]
+# ['a', 'b', ['c', ['d', 'e', ['f', 'g', 'h', 'i', 'j'], 'k'], 'l'], 'm', 'n']
+
+list1[2][1][2].extend(sub_list)
+print(list1)
+
+
+# (9) Write a program to find value 20 in the list, and if it is present,
+# replace it with 200. Only update the first occurrence of an item.
+list1 = [5, 10, 15, 20, 25, 50, 20]
+# [5, 10, 15, 200, 25, 50, 20]
+
+index = list1.index(20)
+list1[index] = 200
+print(list1)
+
+
+# using built-in remove and insert
+list1 = [5, 10, 15, 20, 25, 50, 20]
+index = list1.index(20)
+list1.remove(list1[index])
+list1.insert(index, 200)
+print(list1)
+
+
+# (10) Given a Python list, write a program to remove all occurrences of item 20.
+list1 = [5, 20, 15, 20, 25, 50, 20]
+# [5, 15, 25, 50]
+
+list1 = [num for num in list1 if num != 20]
+print(list1)
