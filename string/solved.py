@@ -175,6 +175,10 @@ print(str1_comp)
 # (18) Write a program to find words with both alphabets and numbers from an input string.
 str1 = "Emma25 is Data scientist50 and AI Expert"  # Emma25 , scientist50
 
+alpha_numeric = [word for word in str1.split(
+    " ") if any(char.isalpha() for char in word) and any(char.isdigit() for char in word)]
+print(alpha_numeric)
+
 
 # (19) Replace each special symbol with # in the following string
 str1 = "/*Jon is @developer & musician!!"
