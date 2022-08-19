@@ -31,3 +31,39 @@ sampleDict = {
 }
 
 print(sampleDict['class']['student']['marks']['history'])
+
+
+# (4)  Initialize dictionary with default values
+employees = ['Kelly', 'Emma']
+defaults = {"designation": 'Developer', "salary": 8000}
+# {'Kelly': {'designation': 'Developer', 'salary': 8000}, 'Emma': {'designation': 'Developer', 'salary': 8000}}
+
+new_dict = dict.fromkeys(employees, defaults)
+print(new_dict)
+
+
+# (5) Write a Python program to create a new dictionary by extracting the mentioned keys from the below dictionary.
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"}
+
+keys = ["name", "salary"]
+# {'name': 'Kelly', 'salary': 8000}
+
+pythonic_dict = {key: sample_dict[key] for key in keys}
+print(pythonic_dict)
+
+# or
+less_pythonic_dict = dict()
+for key in keys:
+    less_pythonic_dict.update({key: sample_dict[key]})
+print(less_pythonic_dict)
+
+# another one
+new_dict = {}
+for key in keys:
+    if not key in sample_dict.items():
+        new_dict[key] = sample_dict[key]
+print(new_dict)

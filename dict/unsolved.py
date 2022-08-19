@@ -23,3 +23,21 @@ sampleDict = {
         }
     }
 }
+
+
+# (4)  Initialize dictionary with default values
+employees = ['Kelly', 'Emma']
+defaults = {"designation": 'Developer', "salary": 8000}
+# {'Kelly': {'designation': 'Developer', 'salary': 8000}, 'Emma': {'designation': 'Developer', 'salary': 8000}}
+# HINT explore built-in dict methods
+
+
+# (5) Write a Python program to create a new dictionary by extracting the mentioned keys from the below dictionary.
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"}
+
+keys = ["name", "salary"]
+# {'name': 'Kelly', 'salary': 8000}
