@@ -140,6 +140,9 @@ sample_dict = {
 
 print(min(sample_dict, key=sample_dict.get))
 
+min_value = sorted(list(value for value in sample_dict.values()))[0]
+print(min_value)  # 65
+
 
 # (10) Change value of a key in a nested dictionary
 sample_dict = {
@@ -148,3 +151,6 @@ sample_dict = {
     'emp3': {'name': 'Brad', 'salary': 500}
 }
 # 'emp3': {'name': 'Brad', 'salary': 8500}
+sample_dict['emp3']['salary'] = 8500
+
+print(sample_dict)
