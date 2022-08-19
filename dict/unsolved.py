@@ -41,3 +41,22 @@ sample_dict = {
 
 keys = ["name", "salary"]
 # {'name': 'Kelly', 'salary': 8000}
+
+
+# (6) Delete a list of keys from a dictionary
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+# Keys to remove
+keys = ["name", "salary"]
+
+# {'city': 'New york', 'age': 25}
+
+
+# (7) Write a Python program to check if value 200 exists in the following dictionary.
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+# 200 present in a dict

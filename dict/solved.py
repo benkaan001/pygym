@@ -67,3 +67,39 @@ for key in keys:
     if not key in sample_dict.items():
         new_dict[key] = sample_dict[key]
 print(new_dict)
+
+
+# (6) Delete a list of keys from a dictionary
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+
+# Keys to remove
+keys = ["name", "salary"]
+# {'city': 'New york', 'age': 25}
+
+removed_item_values = [sample_dict.pop(key) for key in keys]
+print(sample_dict)
+print(removed_item_values)  # ['Kelly', 8000]
+
+
+# another comprehension
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+sample_dict = {key: sample_dict[key] for key in sample_dict.keys() - keys}
+print(sample_dict)
+
+
+# (7) Write a Python program to check if value 200 exists in the following dictionary.
+sample_dict = {'a': 100, 'b': 200, 'c': 300}
+# 200 present in a dict
+
+print('200 is present') if 200 in sample_dict.values(
+) else print('200 is not there')
