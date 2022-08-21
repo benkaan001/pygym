@@ -99,3 +99,15 @@ if set1.isdisjoint(set2):
     print("No items in common")
 else:
     print(f"Common items are: {set1.intersection(set2)}")
+
+
+# (8) Update set1 by adding items from set2, except common items
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+# {70, 10, 20, 60}
+
+
+# (9) Remove items from set1 that are not common to both set1 and set2
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+# {40, 50, 30}
