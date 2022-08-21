@@ -107,7 +107,27 @@ set2 = {30, 40, 50, 60, 70}
 # {70, 10, 20, 60}
 
 
+# built-in intersection_update()
+set1.symmetric_difference_update(set2)
+print(set1)
+
+# without built-in method
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+diff1 = set1.difference(set2)
+print(diff1)  # {10, 20}
+diff2 = set2.difference(set1)
+print(diff2)  # {60, 70}
+combined = diff1.union(diff2)
+# combined = set(list(difference_set1) + list(difference_set2))
+print(combined)  # {70, 10, 20, 60}
+
+
 # (9) Remove items from set1 that are not common to both set1 and set2
 set1 = {10, 20, 30, 40, 50}
 set2 = {30, 40, 50, 60, 70}
 # {40, 50, 30}
+
+# using built-in intersection_update()
+set1.intersection_update(set2)
+print(set1)
