@@ -61,3 +61,41 @@ print(set1)  # {10, 20, 30}
 
 set1.difference_update(set2)
 print(set1)  # {10, 30}
+
+
+# (5) Write a Python program to remove items 10, 20, 30 from the following set at once.
+set1 = {10, 20, 30, 40, 50}
+# {40,50}
+
+set1 = {item for item in set1 if item >= 40}
+print(set1)
+
+# built-in difference_update takes in an iterable
+set1 = {10, 20, 30, 40, 50}
+set1.difference_update([10, 20, 30])
+print(set1)
+
+
+# (6)  Return a set of elements present in Set A or B, but not both
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+# {20, 70, 10, 60}
+
+# built-in symetric difference
+print(set1.symmetric_difference(set2))
+
+# super unncessary solution
+unique_set1 = {item for item in set1 if item not in set2}
+unique_set2 = {item for item in set2 if item not in set1}
+print(set(list(unique_set1)+list(unique_set2)))
+
+
+# (7) Check if two sets have any elements in common. If yes, display the common elements
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+# {10}
+
+if set1.isdisjoint(set2):
+    print("No items in common")
+else:
+    print(f"Common items are: {set1.intersection(set2)}")

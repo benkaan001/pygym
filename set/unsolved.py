@@ -20,3 +20,20 @@ set2 = {30, 40, 50, 60, 70}
 set1 = {10, 20, 30}
 set2 = {20, 40, 50}
 # set1 {10, 30}
+
+
+# (5) Write a Python program to remove items 10, 20, 30 from the following set at once.
+set1 = {10, 20, 30, 40, 50}
+# {40,50}
+
+
+# (6)  Return a set of elements present in Set A or B, but not both
+set1 = {10, 20, 30, 40, 50}
+set2 = {30, 40, 50, 60, 70}
+# {20, 70, 10, 60}
+
+
+# (7) Check if two sets have any elements in common. If yes, display the common elements
+set1 = {10, 20, 30, 40, 50}
+set2 = {60, 70, 80, 90, 10}
+# {10}
