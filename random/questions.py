@@ -8,4 +8,6 @@
 """
 
 
-""" (3)  Generate 6 digit random secure OTP"""
+""" (3) Generate 6 digit random secure OTP"""
+
+""" (4) Pick a random character from a given stirng"""
