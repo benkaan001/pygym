@@ -6,3 +6,6 @@
             The lottery number must be 10 digits long.
             All 100 ticket number must be unique.
 """
+
+
+""" (3)  Generate 6 digit random secure OTP"""
