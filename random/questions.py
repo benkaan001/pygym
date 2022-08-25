@@ -29,3 +29,5 @@
 """ (8) Generate a random secure token """
 
 """ (9) Generate a random URL"""
+
+""" (10) Roll dice in a way that produces the same outcome. Generate the same outcome 5 times"""
