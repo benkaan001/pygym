@@ -25,3 +25,7 @@
             First number must be between 0.1 and 1
             Second number must be between 9.5 and 99.5
 """
+
+""" (8) Generate a random secure token """
+
+""" (9) Generate a random URL"""
