@@ -8,7 +8,7 @@ import string
 
 
 def generate_random_string(str_len):
-    """Generate a random string of 5 characters"""
+    """Generates a random string of 5 characters"""
     letters = string.ascii_letters  # abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
     # return "".join(random.choice(letters) for i in range(str_len))
     # print(random.choices(letters, k=5))  # ['Y', 'x', 'v', 'H', 'd']

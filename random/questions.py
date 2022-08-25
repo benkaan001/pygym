@@ -13,3 +13,9 @@
 """ (4) Pick a random character from a given stirng"""
 
 """ (5) Generate a random string composed of 5 characters including only UPPER and lower case."""
+
+"""(6) Generate a random password that has 10 characters and contains AT LEAST
+        2 UPPERCASE letters
+        1 digit
+        1 special character
+"""
