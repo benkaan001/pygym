@@ -19,3 +19,9 @@
         1 digit
         1 special character
 """
+
+"""(7) Calculate multiplication of two random float numbers
+    Conditions:
+            First number must be between 0.1 and 1
+            Second number must be between 9.5 and 99.5
+"""
