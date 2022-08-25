@@ -11,3 +11,5 @@
 """ (3) Generate 6 digit random secure OTP"""
 
 """ (4) Pick a random character from a given stirng"""
+
+""" (5) Generate a random string composed of 5 characters including only UPPER and lower case."""
