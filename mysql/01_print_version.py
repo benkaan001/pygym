@@ -30,6 +30,7 @@ def read_database_version():
 
 print("Database version")
 read_database_version()
+close_connection()
 
 # Database version
 # Connected to SQL version: ('8.0.30',)
