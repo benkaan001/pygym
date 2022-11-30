@@ -31,7 +31,13 @@ abbreviations = {'Alabama':'al', 'Alaska':'ak', 'Arizona':'az', 'Arkansas':'ar',
          'Virginia':'va', 'Washington':'wa', 'West Virginia':'wv', 
          'Wisconsin':'wi', 'Wyoming':'wy'}
 
-# TASK: Print out the full name of the oldest state(s)
 
 # sample print
 print(reprlib.repr(admissions)) # {'ak': 1959, 'al': 1819, 'ar': 1836, 'az': 1912, ...}
+
+"""
+    TASK -> Print out the full name of the oldest state(s)
+    
+    EXPECTED OUTPUT -> ['Delaware', 'New Jersey', 'Pennsylvania']
+
+"""

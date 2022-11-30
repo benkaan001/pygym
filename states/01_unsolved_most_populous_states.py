@@ -3,7 +3,6 @@
 # import reprlib module to limit print output
 import reprlib
 
-# TASK print out the capitals of the most populous 3 states
 
 
 populations = {'al':4833722, 'ak':735132, 'az':6626624, 'ar':2959373, 'ca':38332521,
@@ -34,6 +33,11 @@ capitals = {'al':'Montgomery', 'ak':'Juneau', 'az':'Phoenix',
            'wa':'Olympia', 'wv':'Charleston', 'wi':'Madison', 'wy':'Cheyenne'}
 
 # sample print
-print(reprlib.repr(capitals)) 
-# {'ak': 'Juneau', 'al': 'Montgomery', 'ar': 'Little Rock', 'az': 'Phoenix', ...}
+print(reprlib.repr(capitals)) # {'ak': 'Juneau', 'al': 'Montgomery', 'ar': 'Little Rock', 'az': 'Phoenix', ...}
 
+"""
+    TASK -> print out the capitals of the most populous 3 states
+    
+    EXPECTED OUTPUT -> ['Sacramento', 'Albany', 'Austin']
+
+"""
