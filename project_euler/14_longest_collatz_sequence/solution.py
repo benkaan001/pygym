@@ -2,16 +2,15 @@ def collatz(number):
     numbers = []
 
     while number > 1:
-        num = number
-        temp = num / 2 if num % 2 == 0 else (3 * num) + 1
+        temp = number / 2 if number % 2 == 0 else (3 * number) + 1
         numbers.append(int(temp))
         number = temp
 
     return numbers
 
 
-number = 13
-print(collatz(number))  # [40, 20, 10, 5, 16, 8, 4, 2, 1]
+num = 13
+print(collatz(num))  # [40, 20, 10, 5, 16, 8, 4, 2, 1]
 
 
 lengths = {}
