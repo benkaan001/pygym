@@ -1,17 +1,3 @@
-# n → n/2 (n is even)
-# n → 3n + 1 (n is odd)
-
-# lengths = []
-
-# for x in range(1000000, 0, -1):
-#     numbers = []
-#     for i in range(1000, 0, -1):
-#         temp = i / 2 if i % 2 == 0 else (3 * i) + 1
-#         numbers.append(temp)
-#     lengths.append(len(numbers))
-# print(lengths)
-
-
 def collatz(number):
     numbers = []
 
