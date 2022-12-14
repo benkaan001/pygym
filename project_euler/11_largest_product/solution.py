@@ -76,7 +76,7 @@ def get_max_vertically(mtx):
     for i in range(len(mtx)):
         multiplication = 1
         for j in range(len(mtx)):
-            multiplication = multiplication * mtx[j][i]
+            multiplication *= mtx[j][i]
             if multiplication > max:
                 max = multiplication
 
