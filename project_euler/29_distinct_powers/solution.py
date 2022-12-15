@@ -18,5 +18,8 @@ print(len(nums)) #9183
 # end time
 end = time.time()
 
-print(f"Solution took {end - start} second(s)")
+# time difference between end and start
+diff1 = end - start
+
+print(f"Solution took {diff1} second(s)")
 # Solution took 0.7711269855499268 second(s)
