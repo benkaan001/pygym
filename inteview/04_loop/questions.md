@@ -344,27 +344,7 @@ Expected Output:
 5^3 = 125
 ```
 
-(Note: The function will print these lines.)
-
-**Exercise 17: Find the sum of the series up to n terms**
-
-Function:
-```python
-def calculate_series_sum(n):
-    pass
-```
-
-Sample Input:
-```python
-calculate_series_sum(5)
-```
-
-Expected Output:
-```
-Sum of the series up to 5 terms: 1.7178571428571427
-```
-
-**Exercise 18: Print the following pattern**
+**Exercise 17: Print the following pattern**
 
 Function:
 ```python
