@@ -25,8 +25,39 @@ In this example:
 - We use `PARTITION BY RANGE (YEAR(sales_date))` to partition the table by the year of the `sales_date` column.
 - We define four partitions (`p2010`, `p2011`, `p2012`, `p2013`) using the `VALUES LESS THAN` clause to specify the upper boundary of each partition based on the year.
 
+# Custom Partition Function Using `Hash`
 
-# Custom Partition Function
+
+Hash partitioning is a method of partitioning data in a database by distributing rows across partitions based on the result of a hash function applied to one or more columns. This ensures even distribution of data across partitions, making it useful for balancing workload and ensuring efficient query processing.
+
+Here's a simplified example of hash partitioning in MySQL:
+
+Suppose we have a table named `user_data` that stores user information, and we want to hash partition it based on the `user_id` column. We'll create a partitioned table with four partitions, and data will be distributed across these partitions based on the hash of the `user_id`.
+
+```sql
+-- Create partitioned table with hash partitioning
+CREATE TABLE user_data (
+    user_id INT NOT NULL,
+    username VARCHAR(50),
+    email VARCHAR(100),
+    -- Other columns
+)
+PARTITION BY HASH(user_id)
+PARTITIONS 4;
+```
+
+In this example:
+
+- We create a table named `user_data` with columns `user_id`, `username`, and `email`.
+- We specify `PARTITION BY HASH(user_id)` to indicate that we want to hash partition the table based on the `user_id` column.
+- We specify `PARTITIONS 4` to create four partitions for the table.
+
+When data is inserted into the `user_data` table, MySQL will apply a hash function to the `user_id` of each row and distribute the rows across the four partitions based on the hash value. This ensures that rows with similar `user_id` values are evenly distributed across the partitions.
+
+Hash partitioning is particularly useful when the distribution of data is unpredictable or when you want to evenly distribute data across partitions without specifying explicit ranges or lists for partitioning. It helps in achieving a balanced workload across database nodes and improves query performance by reducing the need to scan large amounts of data in a single partition.
+
+
+# Custom Partition Function 2
 
 
 Here's a simple example of how you can partition a table in MySQL:
