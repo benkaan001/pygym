@@ -83,3 +83,29 @@ print(f"Number of Employees (Admin Department, April onwards): {number_of_employ
 ```python
 Number of Employees (Admin Department, April onwards): 1
 ```
+
+## Inefficient Solution
+
+```py
+def is_beyond_April(date):
+    try:
+        month_string = str(date).split('-')[1].replace('0', '')
+        return int(month_string) >= 4
+    except Exception:
+        # Handle potential non-date type (return False for safety)
+        return False
+
+sample_date = '2014-06-20'
+print(is_beyond_April(sample_date)) # True
+
+sample_date = '2014-03-20'
+print(is_beyond_April(sample_date)) # False
+
+sample_date = '2014-Apr-20'
+print(is_beyond_April(sample_date)) # False
+
+worker[worker.apply(lambda row: is_beyond_April(row['joining_date']), axis=1)]
+
+worker[(worker.apply(lambda row: is_beyond_April(row['joining_date']), axis=1)) & (worker['department'] == 'Admin')].shape[0]
+
+```
