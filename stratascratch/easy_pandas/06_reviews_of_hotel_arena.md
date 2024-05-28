@@ -1,54 +1,52 @@
-## Counting Reviews by Score for 'Hotel Arena'
-
-This solution addresses the task of finding the number of reviews each score received by 'Hotel Arena'. Here's a breakdown of the steps involved:
-
-**Step 1: Filter Reviews for 'Hotel Arena'**
-
-* We use `.query("hotel_name == 'Hotel Arena'")` to filter the `hotel_reviews` DataFrame and select only rows where the 'hotel_name' is 'Hotel Arena'.
-* We then select the relevant columns (`reviewer_score` and `hotel_name`) using `[['reviewer_score', 'hotel_name']]`.
+## Counting Reviews by Score for 'Hotel Arena' (Explicit Columns)
 
 
+**Steps:**
 
-```python
-filtered_df = hotel_reviews.query("hotel_name == 'Hotel Arena'")[['reviewer_score', 'hotel_name']]
-```
+1. **Filter Reviews for 'Hotel Arena'**
 
-**Explanation:**
+   - We use `.query("hotel_name == 'Hotel Arena'")` to filter the `hotel_reviews` DataFrame and select only rows where the 'hotel_name' is 'Hotel Arena'.
 
-This step creates a new DataFrame (`filtered_df`) containing reviews specifically for 'Hotel Arena' and keeps only the 'reviewer_score' and 'hotel_name' columns for this task.
+   ```python
+   filtered_df = hotel_reviews.query("hotel_name == 'Hotel Arena'")
+   ```
 
-**Step 2: Group by Score and Count Reviews**
+   **Explanation:**
 
-* We use `.groupby('reviewer_score')` to group the filtered DataFrame (`filtered_df`) by the 'reviewer_score' column. This creates groups for each unique review score.
-* We then use `.count()` on the grouped data to count the number of reviews within each score group. The result (`grouped_df`) is a Series containing review scores as the index and review counts as the values.
+   This step creates a new DataFrame (`filtered_df`) containing reviews specifically for 'Hotel Arena'.
 
+2. **Group by Score and Count (with Hotel Name)**
 
-```python
-grouped_df = filtered_df.groupby('reviewer_score').count()
-```
+   - We use `.groupby(['reviewer_score', 'hotel_name'])` to group the filtered DataFrame (`filtered_df`) by both the 'reviewer_score' and 'hotel_name' columns. This ensures each score is counted specifically for 'Hotel Arena'.
+   - `.size()` calculates the number of reviews within each group (score and hotel name combination).
+   - `.to_frame(name='n_reviews')` converts the result into a DataFrame with a column named 'n_reviews' containing the review counts.
 
-**Explanation:**
+   ```python
+   grouped_df = filtered_df.groupby(['reviewer_score', 'hotel_name']).size().to_frame(name='n_reviews')
+   ```
 
-This step categorizes the reviews based on the reviewer score and then calculates the number of reviews given for each score. The output is a Series where the index represents the review score and the values represent the number of reviews for that score (specifically for 'Hotel Arena').
+   **Explanation:**
 
-**Step 3: Print the Results (Series)**
+   This step groups the reviews based on the reviewer score **and** explicitly includes the hotel name in the grouping. The `.size()` function then counts the occurrences within each group, resulting in a Series with reviewer score and hotel name as the index, and the corresponding number of reviews ('n_reviews') as the values.
 
-* While not explicitly mentioned in the provided steps, you can print `grouped_df` to view the Series containing the review score counts.
+3. **Reset Index for Columns (Optional)**
 
+   - While not strictly necessary for this specific task, `.reset_index()` transforms the multi-level index (from grouping) into regular columns within the DataFrame (`grouped_df`). This can improve readability, especially when working with the DataFrame later.
 
-```python
-print(grouped_df)
-```
+   ```python
+   grouped_df = grouped_df.reset_index()
+   ```
+
+   **Explanation:**
+
+   This step, although optional, creates a more conventional DataFrame structure by incorporating the grouping variables ('reviewer_score' and 'hotel_name') as regular columns alongside the 'n_reviews' column.
 
 **Sample Output:**
 
-```
-reviewer_score
-1.0    2
-2.0    5
-3.0    3
-4.0    4
-5.0    1
-dtype: int64
-```
-
+| reviewer_score | hotel_name | n_reviews |
+|---|---|---|
+| 3.8             | Hotel Arena | 1         |
+| 4.2             | Hotel Arena | 4         |
+| 4.6             | Hotel Arena | 5         |
+| 5.4             | Hotel Arena | 8         |
+| 5.8             | Hotel Arena | 2         |
