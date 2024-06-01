@@ -31,7 +31,3 @@ The `.shape` attribute provides a tuple containing the DataFrame dimensions (row
 ```
 1
 ```
-
-**Note:**
-
-This assumes the `oscar_nominees` DataFrame has a 'nominee' column containing the names of nominees and potentially other relevant information.
